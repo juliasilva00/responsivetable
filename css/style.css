@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.onlyTab{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.onlyTab td, .onlyTab th{
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.onlyTab th{
+    background-color: #871F78;
+    color: #ffffff;
+}
+
+.onlyTab tbody:nth-child(ever){
+    background-color: #f5f5f5 ;
+}
+
+/*responsive*/
+
+@media(max-width:500px){
+    .onlyTab thead{
+        display: none;
+    }
+
+    .onlyTab, .onlyTab tbody, .onlyTab tr, .onlyTab td{
+        display:block;
+        width: 100%;
+    }
+
+    .onlyTab tr{
+        margin-bottom: 15px;
+    }
+
+    .onlyTab td{
+        text-align: right;
+        scroll-padding-left: 50%;
+        position: relative;
+        text-align: right;
+    }
+
+    .onlyTab td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        scroll-padding-left:15px ;
+        font-weight:bold ;
+        text-align: left;
+
+    }
+}
